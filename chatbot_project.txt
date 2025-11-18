@@ -1,0 +1,11 @@
+def chatbot():
+    questions = 3
+    while questions > 0:
+        question = input("You: ")
+        if question.lower() == "exit": break
+        print("Chatbot:", {"who": "I am a chatbot.", "how": "I'm doing fine, thanks!", "what": "I am here to help you."}.get(question.lower(), "I don't know the answer."))
+        questions -= 1
+    print("Chatbot: Thanks for chatting!")
+
+if __name__ == "__main__":
+    chatbot()

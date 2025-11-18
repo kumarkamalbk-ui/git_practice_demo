@@ -1,0 +1,135 @@
+BDD framwork
+IN POM file we will add dependency before project
+
+o add a BDD framework dependency in a Maven POM file, you need to add the dependency to the dependencies section of the POM file. Here's an example dependency for Cucumber:
+
+Copy code
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>6.10.2</version>
+    <scope>test</scope>
+</dependency>
+This adds the Cucumber Java dependency with version 6.10.2 to the test scope of your project. You can replace cucumber-java with the name of the BDD framework you want to use and update the version number accordingly.
+
+Member
+BDD framwork
+IN POM file we will add dependency before project
+
+Member
+Actually, the dependency for a BDD framework such as Cucumber should be added to the dependencies section of the POM file, not before the project. Here is an example dependency for Cucumber in a Maven POM file:
+
+Copy code
+<dependencies>
+  <dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>6.10.4</version>
+    <scope>test</scope>
+  </dependency>
+</dependencies>
+This example adds the cucumber-java dependency from the io.cucumber group with version 6.10.4 and test scope. You can modify the version number or scope as needed for your project.
+
+Member
+There are 3 things  we make in cucumber
+1 feature file
+
+
+
+step defination class
+
+Test runner class
+  in src test java
+in feature file, file name will be Login.feature, Registration.feature, etc.
+
+Member
+That's correct! Cucumber is a popular BDD (Behavior-Driven Development) framework that uses the Gherkin language to write feature files. These feature files contain scenarios that describe the behavior of the application in a human-readable format.
+
+The step definition class contains the code that maps each step in the feature file to a particular action that the application should perform.
+
+The test runner class is responsible for running the tests and generating the reports. It specifies the location of the feature files and the step definition class.
+
+To add a Cucumber dependency to your Maven POM file, you should add the following code to the dependencies section:
+
+xml
+Copy code
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>6.10.4</version>
+    <scope>test</scope>
+</dependency>
+This will add the Cucumber Java dependency to your project. You can also add other dependencies for Cucumber, such as Cucumber JUnit or Cucumber Spring. Just make sure to add them to the dependencies section of your POM file.
+
+Member
+I have added different dependencies in my project
+
+
+
+cucumber JAva
+
+cucumber Junit
+
+cucumber core
+
+Junit
+
+Selenium Java
+
+Member
+Great! It seems like you're using Cucumber and Selenium for your project. To use Cucumber, you'll need to add the Cucumber dependency to your Maven POM file. You can do this by adding the following code to the dependencies section of your POM file:
+
+xml
+Copy code
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>{insert version number here}</version>
+</dependency>
+This dependency is for Cucumber's Java implementation. Additionally, you'll need to add the following dependencies for Cucumber's JUnit integration and Selenium:
+
+xml
+Copy code
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>{insert version number here}</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>{insert version number here}</version>
+</dependency>
+As for the three things you mentioned in Cucumber, feature files are where you define the behavior of your application in natural language. Step definition classes are where you define the code that executes the behavior defined in the feature files. And test runner classes are where you specify the location of your feature files and step definition classes.
+
+We create scenario outline in BDD when we wants to run multiple set of values
+Yes, that's correct! In BDD, scenario outline is used to run the same scenario with different sets of values. It allows for efficient testing of different scenarios without having to write multiple scenarios with slight variations. The outline defines placeholders for the values, which are then filled in by the test data table. This makes it easy to test different combinations of inputs and expected outputs, and helps ensure that all possible scenarios are covered in testing.
+
+
+Why we comment in BDD like #Author, #Date
+
+Member
+In BDD, comments are used to provide additional information about the feature, scenario, or step definition. Comments with the author and date provide valuable information about who wrote the feature or scenario and when it was written, making it easier to track changes and collaborate with team members. This is especially useful in larger projects where multiple people are working on the same feature or scenario. Additionally, comments can be used to explain the purpose or intent of the feature or scenario, provide context for the steps, or describe any assumptions or dependencies.
+
+We will write <dependency> mannualy 1st, in POM then copy paste from MVN repository
+
+
+Que: why we use RunWith(Cucumber.class) in BDD ?
+ans: It more like a starting point for Junit to start executing your tests.
+
+It will make console output for the Cucumber test much more readable and remove any unreadable character
+cucumber.option : work as property file
+
+Pagination means go from one page to another
+
+Data Driven development 
+take data from outside resource
+
+If we will parameterise the value in feature file we will write <username> & <password> in like way.
+in step file use (.*) & (.*) in the line when user enter (.*) & (.*)...
+from RaghV 5TH LECTURE
+string user nme & password in
+Example: Pulic void enter_enter_username_pass(String username, String password);
+
